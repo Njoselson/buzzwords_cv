@@ -1,0 +1,13 @@
+
+# VIM
+*sw*
+tags
+
+# Python
+__pycache__/
+.python-version
+
+# Data
+*.pdf
+*.html
+*.txt
