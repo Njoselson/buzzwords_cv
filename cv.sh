@@ -23,7 +23,14 @@ fi
 main() {
     WHITE='\033[1;37m'
     NC='\033[0m' # No Color
-    printf "I ${WHITE}love${NC} Stack Overflow\n" | ./ansi2html.sh > ${1}.html
+    echo "Gathering text from python"
+    cv=$(python cv.py 2>&1)
+    cowsay=$(figlet -f banner3 Nate\'s CV | cowthink -n -e ^^ -T U 2>&1)
+    flowers=$(cat flower.txt 2>&1)
+    echo "putting together text and media "
+    printf "$cowsay\n$cv\n$flowers" \
+        | ./ansi2html.sh > ${1}.html
+    echo "converting to PDF"
     wkhtmltopdf ${1}.html ${1}.pdf 
 
 }
