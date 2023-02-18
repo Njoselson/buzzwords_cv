@@ -25,7 +25,11 @@ main() {
     NC='\033[0m' # No Color
     echo "Gathering text from python"
     cv=$(python cv.py 2>&1)
-    cowsay=$(figlet -f banner3 Nate\'s CV | cowthink -n -e ^^ -T U 2>&1)
+    cowsay=$(cowsay -e ^^ -W 20 "Nathaniel Joselson
+    Address line
+    Phone number 
+    ")
+    
     flowers=$(cat flower.txt 2>&1)
     echo "putting together text and media "
     printf "$cowsay\n$cv\n$flowers" \
