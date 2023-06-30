@@ -6,6 +6,7 @@ tags
 # Python
 __pycache__/
 .python-version
+.DS_Store
 
 # Data
 *.pdf
