@@ -1,0 +1,112 @@
+{
+    "work_experiences":[ 
+        {
+            "name":"Data Scientist - [Corti](https://www.corti.ai/)",
+            "dates":"August 2021-Present",
+            "description":"AI driven emergency medical consulation analysis, disease detection and automated triage",
+            "skills":[
+                "Wrote NLP search and ingestion API on top of Elasticsearch to enable conversation quality analysis.",
+                "Developed NLP pipelines for direct and implied medical questions and other conversational features.",
+                "Developed a framework for ingesting audio and metadata to integrate with call recorder systems.",
+                "Implemented text classification models for detecting medical features such as Cardiac Arrest."
+            ]
+        },
+        {
+            "name":"Data Scientist - [Min Doktor Healthcare AB](https://www.mindoktor.se/)",
+            "dates":"August 2018-August 2021",
+            "description":"Health-tech startup focusing on text and image-based digital primary care and automated triage.",
+            "skills":[
+                "Designed and developed automated ETL pipelines, data warehousing and data visualization schemas.",
+                "Built statistical predictive models such as customer LTV and NLP models such as symptom classification",
+                "Developed and deployed internal web-applications for ML data quality testing and improvement work.",
+                "Built GDPR and HIPAA compliance into warehouse architecture for storing personal and sensitive data."
+            ]
+        },
+        {
+            "name":"Modelling Consultant - [Ocean and Land Resource Assessment Consultants](https://www.olsps.com/)",
+            "dates":"January 2015-October 2016",
+            "description":"Fisheries modelling consultancy working with South African Government to allocate allowable catch",
+            "skills":[
+                "Rewrote optimization procedure for allowable catch model with a modern optimization package leading to 10x speed increases in optimization"
+            ]
+        }
+
+    ],
+    "academics":[ 
+        {
+            "name":"Msc. in Mathematical Statistics",
+            "dates":"August 2017-August 2019",
+            "description":"Lund Univeristy Department of Mathematics",
+            "skills":[
+                "Thesis: [Emotion Classification with Natural Language Processing](https://www.researchgate.net/publication/339697919)",
+                "Advisor: Pierre Nugues, Associate Professor Dept. of Computer Science Lund University"
+            ]
+        },
+        {
+            "name":"Bsc. Honours in Statistical Sciences",
+            "dates":"January 2016-December 2016",
+            "description":"University of Cape Town Department of Statistical Sciences",
+            "skills":[
+                "Thesis: [Uses of Principal Components in Generalized Linear Modelling](https://www.researchgate.net/publication/310949785)",
+                "3rd Place Winner of the South African Statistical Association Honours Thesis competition"
+            ]
+        },
+        {
+            "name":"Bachelors of Commerce in Economics and Statistics",
+            "dates":"January 2013-December 2015",
+            "description":"University of Cape Town",
+            "skills":[
+            ]
+        },
+        {
+            "name":"International Baccalaureate Diploma",
+            "dates":"August 2010-June 2012",
+            "description":"United World College in Mostar, Bosnia and Hercegovina",
+            "skills":[
+            ]
+        }
+
+    ],
+    "projects":[
+        {
+            "name":"Blog: [Inclusive Statistics](https://njoselson.github.io/)",
+            "dates":"October 2016-Present",
+            "description":"Created in Jekyll with Github Pages",
+            "skills":[
+                "Reflections on how the past and present of the statistical sciences and technology interact with questions of inclusivity, privacy and technology's winners and losers."
+            ]
+        }
+    ],
+    "skills":[
+        {
+            "name":"Programming Languages",
+            "dates":" ",
+            "description":"Python (Advanced), SQL (Advanced), Bash (Intermediate), R (Intermediate), C++ (Basic), Java (Basic)",
+            "skills":[
+            ]
+        },
+        {
+            "name":"Tools",
+            "dates":" ",
+            "description":"Deployment (Docker, Kubernetes), Cloud (Azure, GCP, Heroku), SQL (Postgres, BigQuery, Mssql), NoSQL (MongoDB, Elasticsearch)",
+            "skills":[
+            ]
+        },
+        {
+            "name":"Skills",
+            "dates":" ",
+            "description":"Testing (pytest), Machine Learning (pytorch, tensorflow, scikit-learn, xgboost), NLP (spacy, nltk, lucene, flair), Data Analysis (pandas), Web Development (FastApi, Django), Data Visualization (Matplotlib, Streamlit, Seaborn)",
+            "skills":[
+            ]
+        },
+        {
+            "name":"Other",
+            "dates":" ",
+            "description":"English (Native), Swedish (Fluent), Ways of Working (Kanban, Scrum), Development (Domain Driven Design, Test Driven Design)",
+            "skills":[
+            ]
+        }
+
+
+    ]
+}
