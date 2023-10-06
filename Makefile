@@ -4,6 +4,11 @@ tests:
 
 cv: 
 	python generate_cv.py --file_name $(file_name)
+	open $(file_name)
+
+cover_letter: 
+	python generate_cover_letter.py --file_name $(file_name)
+	open $(file_name)
 
 clean:
 	find . -type f -name "*.sw[klmnop]" -delete
