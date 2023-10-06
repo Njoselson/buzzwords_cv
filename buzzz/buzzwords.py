@@ -6,7 +6,7 @@ import logging
 class BuzzWordGetter:
     def __init__(self):
         logging.info("Logging in to linkedin api")
-        self.login = ("nathaniel.joselson@gmail.com", "ilovemaja1000")
+        self.login = ("XXXX", "XXX")
         try:
             self.linkedin_api = linkedin.Linkedin(*self.login)
         except linkedin.cookie_repository.LinkedinSessionExpired:
