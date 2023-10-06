@@ -1,17 +1,29 @@
-import unittest
-import re
+import pytest
 
-from buzzwords import BuzzWordGetter
-
-angelina_lee_cv_url = "https://docs.google.com/document/d/1OevE4HFiAgUPlOym3RAPjtvpk1zIurOKdTdrUFoyS28/edit"
+from buzzz.buzzwords import BuzzWordGetter
 
 
-class TestBuzzWordGetter(unittest.TestCase):
-    def test_buzz_word_getter_collect_should_get_text_from_angelina_lee_cv(self):
-        buzz_word_getter = BuzzWordGetter()
-        raw = buzz_word_getter.collect(angelina_lee_cv_url)
-        self.assertRegexpMatches(raw, r"AngelinaTheDev")
+def test_gets_a_list_of_jobs_with_a_topic():
+    topic = "Machine Learning"
+    n_jobs = 2 
 
+    buzzz = BuzzWordGetter()
+    buzzz.get_jobs(topic=topic, number=n_jobs)
+    assert len(buzzz.jobs_list) == n_jobs
 
-if __name__ == "__main__":
-    unittest.main()
+    for job in buzzz.jobs_list:
+        assert str(job).isnumeric()
+
+def test_gets_text_for_jobs():
+    topic = "Machine Learning"
+    n_jobs = 2 
+
+    buzzz = BuzzWordGetter()
+    buzzz.get_jobs(topic=topic, number=n_jobs)
+    buzzz.get_job_text()
+    assert len(buzzz.job_text) > 0
+    assert "and" in buzzz.job_text
+
+def test_counts_text_in_a_dict():
+    pass
+

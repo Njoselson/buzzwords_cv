@@ -7,8 +7,9 @@ import numpy as np
 BUZZWORDS = [
     "AI",
     "Machine learning",
-    "cloud",
+    "cloud computing",
     "insights",
+    "team player",
     "LLM",
 ]
 
@@ -16,18 +17,20 @@ BUZZWORDS = [
 class CV(FPDF):
     def __init__(self):
         super().__init__()
-        self.set_font("courier", size=8)
+        self.set_font("courier", size=9)
         self.add_page()
         self.left_margin = 10
         self.buzzwords = BUZZWORDS
 
         self.add_contact_information(
+            title="Data Scientist",
+            location="New York, NY, USA",
             email="nathaniel.joselson@gmail.com",
-            phone_num="+123",
-            address="Place in world",
-            linkedin="hi.com",
-            github="me.com",
-            website="me.com",
+            linkedin="\nlinkedin.com/in/nathaniel-joselson-301687132/",
+            phone_num="1(917)332-7756",
+            github="https://github.com/Njoselson",
+            blog="https://njoselson.github.io/",
+            lanugages="English, Swedish"
         )
 
         self.add_name()
@@ -57,7 +60,7 @@ class CV(FPDF):
         self.multi_cell(w=150, txt="**Nathaniel Joselson**", markdown=True)
 
     def add_contact_information(self, **kwargs):
-        self.set_xy(110, 14)
+        self.set_xy(80, 18)
         self.multi_cell(
             w=150,
             txt=self.reformat_cowsay(
@@ -69,7 +72,7 @@ class CV(FPDF):
         )
 
     def reformat_cowsay(self, cowsay_text: str):
-        move_amt = 8
+        move_amt = 16
         lines = [line for line in cowsay_text.split("\n")]
         moved_lines = [" " * move_amt + line for line in lines[:-7]]
         final_text = "\n".join(moved_lines + lines[-7:])
@@ -79,10 +82,10 @@ class CV(FPDF):
         self.buzz_ln()
         about_me = open("buzzz/data/about_me.txt").read().replace("\n", " ")
         self.set_x(self.left_margin)
-        self.multi_cell(w=105, txt=about_me)
+        self.multi_cell(w=97, txt=about_me)
 
     def add_flower(self):
-        self.set_xy(self.left_margin, 37)
+        self.set_xy(self.left_margin,70)
         flower = open("buzzz/data/flower.txt").read()
         self.multi_cell(w=190, txt=flower)
 
@@ -95,20 +98,19 @@ class CV(FPDF):
             w=180, txt=f'__{experience["description"]}__', ln=1, markdown=True
         )
         for skill in experience["skills"]:
+            self.write(txt="~ ")
             self.set_x(self.left_margin + 3)
-            self.multi_cell(w=180, txt="~ " + skill, ln=1, markdown=True)
+            self.multi_cell(w=180, txt=skill, ln=1, markdown=True)
 
     def add_experiences(self):
         experiences = json.load(open("buzzz/data/experience.json"))
 
-        self.buzz_ln()
         self.set_x(self.left_margin)
         self.multi_cell(w=150, txt="**Work Experience**", markdown=True)
         for experience in experiences["work_experiences"]:
             self.buzz_ln()
             self.format_experience(experience)
 
-        self.buzz_ln()
         self.buzz_ln()
         self.set_x(self.left_margin)
         self.multi_cell(w=150, txt="**Academics**", markdown=True)
@@ -117,26 +119,11 @@ class CV(FPDF):
             self.format_experience(experience)
 
         self.buzz_ln()
-        self.buzz_ln()
-        self.set_x(self.left_margin)
-        self.multi_cell(w=150, txt="**Projects**", markdown=True)
-        for experience in experiences["projects"]:
-            self.buzz_ln()
-            self.format_experience(experience)
-
-        self.buzz_ln()
-        self.buzz_ln()
         self.set_x(self.left_margin)
         self.multi_cell(w=150, txt="**Skills**", markdown=True)
         for experience in experiences["skills"]:
             self.buzz_ln()
             self.format_experience(experience)
-
-        self.buzz_ln()
-        self.buzz_ln()
-        self.multi_cell(w=150, txt="**References**", markdown=True)
-        self.buzz_ln()
-        self.multi_cell(w=150, txt="Available on Request", markdown=True)
 
 
 if __name__ == "__main__":
