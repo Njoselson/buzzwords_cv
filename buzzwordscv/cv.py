@@ -1,6 +1,5 @@
 from fpdf import FPDF
 import cowsay
-import lorem
 import json
 import numpy as np
 
@@ -20,6 +19,7 @@ class CV(FPDF):
         self.set_font("courier", size=9)
         self.add_page()
         self.left_margin = 10
+        self.cow_start = 10
         self.buzzwords = BUZZWORDS
 
         self.add_contact_information(
@@ -35,7 +35,7 @@ class CV(FPDF):
 
         self.add_name()
         self.add_about_me()
-        self.add_flower()
+        # self.add_flower()
         self.add_experiences()
 
     def save(self, name: str):
@@ -60,7 +60,7 @@ class CV(FPDF):
         self.multi_cell(w=150, txt="**Nathaniel Joselson**", markdown=True)
 
     def add_contact_information(self, **kwargs):
-        self.set_xy(80, 18)
+        self.set_xy(80, self.cow_start)
         self.multi_cell(
             w=150,
             txt=self.reformat_cowsay(
@@ -80,13 +80,13 @@ class CV(FPDF):
 
     def add_about_me(self):
         self.buzz_ln()
-        about_me = open("buzzz/data/about_me.txt").read().replace("\n", " ")
+        about_me = open("buzzwordscv/data/about_me.txt").read().replace("\n", " ")
         self.set_x(self.left_margin)
         self.multi_cell(w=97, txt=about_me)
 
     def add_flower(self):
-        self.set_xy(self.left_margin,70)
-        flower = open("buzzz/data/flower.txt").read()
+        self.set_xy(self.left_margin,80)
+        flower = open("buzzwordscv/data/flower.txt").read()
         self.multi_cell(w=190, txt=flower)
 
     def format_experience(self, experience):
@@ -103,9 +103,9 @@ class CV(FPDF):
             self.multi_cell(w=180, txt=skill, ln=1, markdown=True)
 
     def add_experiences(self):
-        experiences = json.load(open("buzzz/data/experience.json"))
+        experiences = json.load(open("buzzwordscv/data/experience.json"))
 
-        self.set_x(self.left_margin)
+        self.set_xy(self.left_margin, self.cow_start+ 60)
         self.multi_cell(w=150, txt="**Work Experience**", markdown=True)
         for experience in experiences["work_experiences"]:
             self.buzz_ln()

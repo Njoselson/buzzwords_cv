@@ -1,6 +1,5 @@
 from fpdf import FPDF
 import cowsay
-import lorem
 import json
 import numpy as np
 
@@ -10,7 +9,7 @@ class CoverLetter(FPDF):
         self.set_font("courier", size=11)
         self.add_page()
         self.left_margin = 10
-        self.cover_letter = "buzzz/data/cover_letter_antimetal.txt"
+        self.cover_letter = "buzzwordscv/data/cover_letter_antimetal.txt"
 
         self.cell(txt="**Nathaniel Joselson**", markdown=True,ln=1)
         self.cell(txt="1(917)332-7756", markdown=True,ln=1)
@@ -31,7 +30,7 @@ class CoverLetter(FPDF):
     def add_flower(self):
         self.set_x(self.left_margin)
         self.set_font("courier", size=9)
-        flower = open("buzzz/data/flower.txt").read()
+        flower = open("buzzwordscv/data/flower.txt").read()
         self.multi_cell(w=190, txt=flower)
 
 

@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "buzzwordscv"
+version = "0.1.0"
+description = "A CV that can be stuffed with buzzwords!"
+authors = ["Njoselson"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+numpy = "^1.26.3"
+fpdf2 = "^2.7.7"
+cowsay = "^6.1"
+
+[tool.poetry.group.dev.dependencies]
+PyPDF2 = "^3.0.1"
+pytest = "^8.0.0"
+linkedin-api = "^2.0.3"
+streamlit = "^1.31.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

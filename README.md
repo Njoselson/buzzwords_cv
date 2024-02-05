@@ -2,6 +2,16 @@
 A Plaintext CV project FULL of buzzwords
 
 ## Usage:
+Install requirements
+```bash
+poetry install
+```
+
+Activate environment
+```bash
+poetry shell
+```
+
 Make a new version of CV:
 ```bash
 make cv file_name=cv_name.pdf

@@ -1,8 +1,18 @@
 {
     "work_experiences":[ 
         {
+            "name":"AI/ML Engineer - Lenora Systems",
+            "dates":"October 2023-Present",
+            "description":"AI/ML Consultant for AmeriHealth Caritas, a Medicaid managed care organization",
+            "skills":[
+                "**Pioneered generative AI applications in contract intelligence** through designing and implementing a **LangChain based Retrieval Augmented (RAG) chatbot** for chat-based analysis of health insurance contracts **within only 2 months**.",
+                "Saved development time and money by utilizing open source **LLM and vector database infrastructure** with Llama2-70B and FAISS vector storage for easy portability.",
+                "**Increased LLM testing velocity by 10x** through implementing a parallelized testing scheme for chatbot accuracy analysis."
+            ]
+        },
+        {
             "name":"Data Scientist - [Corti](https://www.corti.ai/)",
-            "dates":"August 2021-Present",
+            "dates":"August 2021-August 2023",
             "description":"AI driven emergency medical consulation analysis, disease detection and automated triage",
             "skills":[
                 "Led NLP projects including automatic **call clustering with BERT embeddings**, Question and **NER entity detection** with LSTM based classification models and Bag of Word models. ",
@@ -54,7 +64,7 @@
         {
             "name":"Programming Languages",
             "dates":" ",
-            "description":"Python (Advanced), SQL (Intermediate), Bash (Intermediate), R (Intermediate), C++ (Basic)",
+            "description":"Python (Advanced), SQL, Bash, R (Intermediate), C++, Java, Scala (Basic)",
             "skills":[
             ]
         },

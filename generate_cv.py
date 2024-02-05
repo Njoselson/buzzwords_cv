@@ -1,4 +1,4 @@
-from buzzz.cv import CV
+from buzzwordscv.cv import CV
 import argparse
 
 

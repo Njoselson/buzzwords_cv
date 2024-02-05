@@ -1,4 +1,4 @@
-from buzzz.cover_letter import CoverLetter
+from buzzwordscv.cover_letter import CoverLetter
 import argparse
 
 

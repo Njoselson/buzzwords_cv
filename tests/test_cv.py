@@ -4,7 +4,7 @@ from pathlib import Path
 import pytest
 from pypdf import PdfReader
 
-from buzzz.cv import CV
+from buzzwordscv.cv import CV
 
 CV_NAME = "cv.pdf"
 
