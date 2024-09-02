@@ -6,10 +6,13 @@ import numpy as np
 BUZZWORDS = [
     "AI",
     "Machine learning",
-    "cloud computing",
-    "insights",
-    "team player",
+    "Metaverse",
+    "VR",
     "LLM",
+    "NLP",
+    "Metaverse",
+    "data2vec",
+    "representation learning",
 ]
 
 
@@ -19,11 +22,11 @@ class CV(FPDF):
         self.set_font("courier", size=9)
         self.add_page()
         self.left_margin = 10
-        self.cow_start = 10
+        self.cow_start = 7 
         self.buzzwords = BUZZWORDS
 
         self.add_contact_information(
-            title="Data Scientist",
+            title="Senior Machine Learning Engineer",
             location="New York, NY, USA",
             email="nathaniel.joselson@gmail.com",
             linkedin="\nlinkedin.com/in/nathaniel-joselson-301687132/",
@@ -79,13 +82,12 @@ class CV(FPDF):
         return final_text
 
     def add_about_me(self):
-        self.buzz_ln()
         about_me = open("buzzwordscv/data/about_me.txt").read().replace("\n", " ")
         self.set_x(self.left_margin)
         self.multi_cell(w=97, txt=about_me)
 
     def add_flower(self):
-        self.set_xy(self.left_margin,80)
+        self.set_xy(self.left_margin+40,53)
         flower = open("buzzwordscv/data/flower.txt").read()
         self.multi_cell(w=190, txt=flower)
 
@@ -105,7 +107,7 @@ class CV(FPDF):
     def add_experiences(self):
         experiences = json.load(open("buzzwordscv/data/experience.json"))
 
-        self.set_xy(self.left_margin, self.cow_start+ 60)
+        self.set_xy(self.left_margin, self.cow_start+ 58)
         self.multi_cell(w=150, txt="**Work Experience**", markdown=True)
         for experience in experiences["work_experiences"]:
             self.buzz_ln()

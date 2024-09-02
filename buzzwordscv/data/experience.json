@@ -1,8 +1,18 @@
 {
     "work_experiences":[ 
         {
+            "name":"Senior Machine Learning Engineer - [EvolutionIQ](https://www.evolutioniq.com/)",
+            "dates":"March 2024-Present",
+            "description":"AI powered disability insurance claims management and automatic documentation",
+            "skills":[
+                "**Improved automated ICD-10 coding precison by 25%** (absolute) by redesigning and reimplementing our medical NER system with updated NLP logic and LLMs.",
+                "**Accelerated insurance claim duration and resolution modeling by 3x** through optimizing our hyperparameter tuning and sweeping in Weights and Biases.",
+                "**Optimized data labeling workflows for speed and reliability** by implementing LLM based auto-labeling and introducing labeling guidelines and inter-annotator agreement metrics"
+            ]
+        },
+        {
             "name":"AI/ML Engineer - Lenora Systems",
-            "dates":"October 2023-Present",
+            "dates":"October 2023-February 2024",
             "description":"AI/ML Consultant for AmeriHealth Caritas, a Medicaid managed care organization",
             "skills":[
                 "**Pioneered generative AI applications in contract intelligence** through designing and implementing a **LangChain based Retrieval Augmented (RAG) chatbot** for chat-based analysis of health insurance contracts **within only 2 months**.",
@@ -17,8 +27,7 @@
             "skills":[
                 "Led NLP projects including automatic **call clustering with BERT embeddings**, Question and **NER entity detection** with LSTM based classification models and Bag of Word models. ",
                 "**Identified model drift** in several ML models through designing and implementing MLOps techniques such as metrics and tests for **monitoring ML models** and search services.",
-                "Enabled automated tracking of conversation quality for call taker training and medical quality assurance of **1M emergency medical calls per year** through designing and implementing an **NLP search** and ingestion API for call text on top of **Elasticsearch**.",
-                "**Accelerated customer onboarding by 20x** through redesigning and reimplementing our ingestion and integration service for customer Audio and medical metadata."
+                "Enabled automated tracking of conversation quality for call taker training and medical quality assurance of **1M emergency medical calls per year** through designing and implementing an **NLP search** and ingestion API for call text on top of **Elasticsearch**."
             ]
         },
         {
@@ -28,14 +37,6 @@
             "skills":[
                 "**Enabled innovative Data Science workflows** through designing and implementing a **data warehouse** with automated, tested **ETL pipelines**, **custom encryption** for GDPR and HIPAA compliance, and domain modelled data with visualization in Looker.",
                 "Enhanced patient experience by **building, evaluating and monitoring NLP classification models** for symptom search and **improved marketing responsiveness to patient Churn** with statistical predictive models such as customer Lifetime Value."
-            ]
-        },
-        {
-            "name":"Numerical Optimization Researcher- [OLSPS Consultants](https://www.olsps.com/)",
-            "dates":"January 2015-October 2016",
-            "description":"Fisheries modeling consultancy working with governments to allocate allowable catch",
-            "skills":[
-                "**Sped up model run time by 10x** through rewriting optimization procedures for the allowable catch model with a modern optimization package on top of C++ code."
             ]
         }
 
